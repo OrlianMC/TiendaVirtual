@@ -3,7 +3,7 @@ import { Modal, Box, Typography, Button } from '@mui/material';
 import CloseIcon from '@mui/icons-material/Close';
 import AddShoppingCartIcon from '@mui/icons-material/AddShoppingCart';
 import PropTypes from 'prop-types';
-import { useCart } from '../components/context/useCart.jsx';
+import { useCart } from '../context/useCart.jsx';
 
 const ProductsDetails = ({ open, handleClose, product }) => {
     const { dispatch } = useCart();
@@ -12,7 +12,6 @@ const ProductsDetails = ({ open, handleClose, product }) => {
     if (!product) {
         return null;
     }
-
 
     const increaseQuantity = (id) => {
         setQuantities((prev) => ({

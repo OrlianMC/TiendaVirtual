@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react';
 import axios from 'axios';
-import Modal_Product_Details from '../components/Modal_Product_Details.jsx';
+import Modal_Product_Details from '../components/modals/Modal_Product_Details.jsx';
 import AddShoppingCartIcon from '@mui/icons-material/AddShoppingCart';
 import WysiwygIcon from '@mui/icons-material/Wysiwyg';
 import { useCart } from '../components/context/useCart.jsx';
@@ -82,7 +82,7 @@ function Products() {
     if (error) return <div className="text-red-500 text-center">{error}</div>;
 
     return (
-        <div className="p-4">
+        <div className="p-4 overflow-y-auto max-h-screen">
             <div className="flex flex-col md:flex-row justify-between items-center">
                 <div className="mb-4 w-full md:w-1/2">
                     <input

@@ -3,8 +3,10 @@ import { Modal, Box, Typography, Button } from '@mui/material';
 import CloseIcon from '@mui/icons-material/Close';
 import AddShoppingCartIcon from '@mui/icons-material/AddShoppingCart';
 import PropTypes from 'prop-types';
+import { useCart } from '../components/context/useCart.jsx';
 
 const ProductsDetails = ({ open, handleClose, product }) => {
+    const { dispatch } = useCart();
     const [quantities, setQuantities] = useState({});
 
     if (!product) {
@@ -28,6 +30,11 @@ const ProductsDetails = ({ open, handleClose, product }) => {
 
     const addToCart = (id) => {
         console.log(`Añadir producto ${id} al carrito con cantidad: ${quantities[id] || 0}`);
+
+        if (product) {
+            dispatch({ type: 'ADD_TO_CART', payload: { ...product, quantity: quantities[id] || 1 } });
+        }
+
         setQuantities((prev) => ({
             ...prev,
             [id]: 0,

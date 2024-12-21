@@ -1,8 +1,22 @@
-# React + Vite
+# Tienda Virtual
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## Instalación
 
-Currently, two official plugins are available:
+1. Ubica la carpeta **TiendaVirtual**.
+2. Ejecuta en consola los siguientes comandos:
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+   ```bash
+   cd TiendaVirtual
+   npm install  # o yarn install
+   npm run dev   # o yarn run dev
+
+
+## Visualización
+
+1. URL de la aplicación desplegada en Vercel:
+
+https://tienda-virtual-jade.vercel.app
+
+2. URL de la aplicación en gitHub:
+
+https://github.com/OrlianMC/TiendaVirtual.git
